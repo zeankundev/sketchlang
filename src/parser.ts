@@ -3,6 +3,7 @@ import { Command, CommandMap } from "./types.js";
 
 import { goto } from "./commands/goto.js";
 import { setfill } from "./commands/setfill.js";
+import { startpath } from "./commands/startpath.js";
 
 class Parser {
     private ctx: CanvasRenderingContext2D;
@@ -12,7 +13,8 @@ class Parser {
         this.ctx = ctx;
         this.commands = {
             goto,
-            setfill
+            setfill,
+            startpath
         }
     }
 
@@ -24,7 +26,8 @@ class Parser {
             const command = this.commands[commandName.toLowerCase()];
 
             if (command) {
-                await command(this.ctx, tokens);
+                const newArguments = args.shift();
+                await command(this.ctx, newArguments ? [newArguments, ...args] : args);
             } else {
                 throw new ReferenceError(`Unknown command: ${commandName}`);
             }
