@@ -1,9 +1,12 @@
 import { CanvasRenderingContext2D } from "skia-canvas";
 import { Command, CommandMap } from "./types.js";
 
-import { goto } from "./commands/goto.js";
-import { setfill } from "./commands/setfill.js";
-import { startpath } from "./commands/startpath.js";
+import { goto } from "./commands/goto";
+import { setfill } from "./commands/setfill";
+import { startpath } from "./commands/startpath";
+import { line } from "./commands/line";
+import { endpath } from "./commands/endpath";
+import { fill } from "./commands/fill.js";
 
 class Parser {
     private ctx: CanvasRenderingContext2D;
@@ -14,7 +17,10 @@ class Parser {
         this.commands = {
             goto,
             setfill,
-            startpath
+            startpath,
+            line,
+            endpath,
+            fill
         }
     }
 

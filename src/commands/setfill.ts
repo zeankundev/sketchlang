@@ -1,7 +1,6 @@
 import { Command } from "../types";
 
 export const setfill: Command = (ctx, args) => {
-    console.log(args)
     if (args.length !== 1) {
         throw new SyntaxError(`setfill command requires 1 argument, got ${args.length}`);
     }
