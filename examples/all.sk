@@ -1,0 +1,91 @@
+$CANVASSIZE 1024 600
+# Sketchlang Feature Test File
+# This file demonstrates all available Sketchlang commands
+# Generated with claude.ai (because I'm lazy)
+
+# Test: rect - Draw a filled rectangle
+setfill #FF6B6B
+rect 50 50 100 80
+
+# Test: setfill and circle - Draw filled circles with different colors
+setfill #4ECDC4
+circle 250 90 40
+
+setfill #45B7D1
+circle 350 90 35
+
+# Test: Path drawing with startpath, goto, line, endpath, setstroke, setlinewidth, and stroke
+startpath
+setlinewidth 3
+setstroke #95E1D3
+goto 50 200
+line 150 200
+line 150 280
+line 50 280
+endpath
+stroke
+
+# Test: Path with fill
+startpath
+setfill #F38181
+goto 200 200
+line 280 200
+line 240 280
+endpath
+fill
+
+# Test: Combined stroke and fill on a path
+startpath
+setfill #FFEAA7
+setstroke #FDCB6E
+setlinewidth 2
+goto 320 200
+line 400 200
+line 400 280
+line 320 280
+endpath
+fill
+stroke
+
+# Test: setfont and text - Draw text with different fonts
+setfont Arial 16px
+setfill #2D3436
+text 50 340 Hello from Sketchlang!
+
+setfont "Times New Roman" bold 20px
+setfill #6C5CE7
+text 50 380 Bold Times New Roman
+
+setfont Courier 14pt
+setfill #00B894
+text 50 420 Courier 14pt font
+
+# Test: stroketext - Draw outlined text
+setfont Verdana bold 24px
+setstroke #D63031
+setlinewidth 2
+stroketext 50 460 Stroked Text
+
+# Test: img - Load and draw an image
+img https://via.placeholder.com/100x100/FF6B6B/FFFFFF?text=Image 300 320 100 100
+
+# Test: Complex shape with multiple lines
+startpath
+setstroke #A29BFE
+setlinewidth 4
+goto 450 50
+line 500 100
+line 550 50
+line 550 150
+line 450 150
+endpath
+stroke
+
+# Test: Transparent colors with rgba
+setfill rgba(255,107,107,0.5)
+circle 500 250 50
+
+setfill rgba(78,205,196,0.7)
+rect 460 300 80 60
+
+# End of feature test
