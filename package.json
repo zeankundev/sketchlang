@@ -1,0 +1,16 @@
+{
+  "name": "sketchlang",
+  "version": "1.0.0",
+  "description": "an esoteric programming language designed for drawing graphics",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "author": "zeankun <zean@zeankun.dev>",
+  "license": "AGPL-3.0-only",
+  "private": false,
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
