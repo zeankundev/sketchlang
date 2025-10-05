@@ -11,6 +11,10 @@
   "license": "AGPL-3.0-only",
   "private": false,
   "devDependencies": {
+    "@types/node": "^24.6.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "skia-canvas": "^3.0.8"
   }
 }

@@ -1,0 +1,12 @@
+$CANVASSIZE 320 240
+
+setfill #ff0000
+
+startpath
+goto 80 50
+line 120 120
+line 160 50
+line 120 70
+line 80 50
+endpath
+fill
