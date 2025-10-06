@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+:root {
+    --accented-text: #f5f5f5;
+    --theme-red: #FF4343;
+    --theme-tosca: #2CA48C;
+    --theme-purple: #C833D5;
+    --font: 'Ubuntu Sans', sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #f5f5f5;
+        --text-color: #1d1d1d;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1d1d1d;
+        --text-color: #f5f5f5;
+    }
+}
